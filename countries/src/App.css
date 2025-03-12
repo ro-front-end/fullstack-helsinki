@@ -1,0 +1,176 @@
+/* Reset básico */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f9fe; /* Fondo claro con un toque azul */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Tipografía moderna */
+  color: #333; /* Color de texto principal */
+  line-height: 1.6; /* Espaciado entre líneas */
+  min-height: 100vh; /* Altura mínima del cuerpo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem 0; /* Reducimos el margen */
+  text-transform: uppercase;
+  font-size: 1.8rem; /* Título más pequeño */
+  color: #2c3e50; /* Azul oscuro para el título */
+  letter-spacing: 0.1rem; /* Espaciado entre letras */
+  font-weight: 700; /* Negrita */
+}
+
+/* Contenedor de búsqueda */
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 0.6rem 1rem; /* Padding más pequeño */
+  width: 50%; /* Ancho más flexible */
+  max-width: 350px; /* Límite máximo de ancho reducido */
+  border-radius: 0.6rem; /* Bordes redondeados más pequeños */
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 1rem auto;
+  position: relative; /* Para alinear el ícono correctamente */
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 0.4rem 0.8rem; /* Padding más pequeño */
+  outline: none;
+  border: 1px solid transparent; /* Borde transparente por defecto */
+  font-size: 0.9rem; /* Texto más pequeño */
+  color: #333;
+  background-color: transparent; /* Fondo transparente */
+  transition: all 0.3s ease-in-out; /* Transición suave */
+  border-radius: 0.4rem; /* Bordes redondeados */
+  width: 100%; /* Ocupa todo el espacio disponible */
+}
+
+.search-input:focus {
+  border: 1px solid #2980b9; /* Resaltado al enfocar */
+  box-shadow: 0 0 0.2rem rgba(41, 128, 185, 0.5); /* Brillo sutil */
+}
+
+.input-container span {
+  font-size: 1.2rem; /* Ícono más pequeño */
+  color: #2980b9; /* Icono de búsqueda en azul */
+  margin-left: 0.6rem;
+  position: absolute; /* Ícono dentro del contenedor */
+  right: 0.8rem;
+  pointer-events: none; /* Evita interacciones con el ícono */
+}
+
+/* Lista de países */
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Fondo blanco */
+  color: #333;
+  width: 90%; /* Ancho más pequeño */
+  max-width: 400px; /* Límite máximo de ancho reducido */
+  margin: 0.8rem auto; /* Margen reducido */
+  padding: 1rem; /* Padding más pequeño */
+  gap: 0.8rem; /* Espaciado reducido */
+  border-radius: 0.6rem; /* Bordes redondeados más pequeños */
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.1); /* Sombra suave */
+  position: relative;
+  transition: transform 0.3s ease-in-out; /* Efecto hover */
+}
+
+li:hover {
+  transform: translateY(-0.2rem); /* Levanta ligeramente el elemento */
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem; /* Espaciado reducido */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem; /* Margen reducido */
+  width: 100%;
+}
+
+.name-btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem; /* Botón más pequeño */
+  border-radius: 0.4rem;
+  background-color: #2980b9; /* Azul llamativo */
+  color: #fff; /* Texto blanco */
+  font-size: 0.9rem; /* Texto más pequeño */
+  font-weight: 600;
+  transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+.name-btn:hover {
+  background-color: #3498db; /* Azul más claro */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+.info-container {
+  background-color: #f9fafb; /* Fondo claro */
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  border-radius: 0.4rem;
+  padding: 0.8rem; /* Padding más pequeño */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem; /* Espaciado reducido */
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem; /* Margen reducido */
+  align-items: center;
+  gap: 1rem; /* Espaciado reducido */
+}
+
+img {
+  width: 6rem; /* Imagen más pequeña */
+  border-radius: 0.4rem; /* Bordes redondeados */
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.img-coat {
+  width: 2rem; /* Escudo más pequeño */
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0.8rem 0; /* Margen reducido */
+  gap: 0.6rem; /* Espaciado reducido */
+  width: 100%;
+  padding: 0.8rem; /* Padding más pequeño */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 0.4rem;
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.weather-icon {
+  width: 4rem; /* Ícono más pequeño */
+  height: 4rem;
+  margin: auto;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
